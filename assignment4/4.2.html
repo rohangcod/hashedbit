@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- Task Statement
+
+Write a JavaScript function createDiv(width, height, text) that creates and adds a new div element inside the #container div with the specified width and height. The div element should have text as its text content.
+
+Note: Do not modify the HTML code
+
+Note: width and height which are passed as arguments to the createDiv function do not contain the unit. Make sure to add the unit of "px" to it before setting the values -->
+
+<div id="container">
+
+</div>
+
+    <script>
+function createDiv(width, height, text) {
+    let newDiv = document.createElement("div");
+    newDiv.style.width = width + "px";
+    newDiv.style.height = height + "px";
+    newDiv.style.border = "2px solid black";
+    newDiv.style.margin = "10px";
+    newDiv.style.display = "inline-block";
+    newDiv.style.textAlign = "center";
+    newDiv.style.lineHeight = height + "px"; 
+    newDiv.textContent = text;
+    document.getElementById("container").appendChild(newDiv);
+}
+
+
+createDiv(150, 75, "Hello Box");
+createDiv(200, 100, "Another Box");
+
+// Do not change this code
+window.createDiv = createDiv;
+
+    </script>
+
+</body>
+</html>
